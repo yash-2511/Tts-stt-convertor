@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TTS ChatBot</title>
-    <link rel="stylesheet" href="ztyle.css">
-
+    <title>STT Chatbot</title>
+    <link rel="stylesheet" href="stt.css">
 </head>
 <body>
-    <div class="conatiner">
-    <h1>Text To Speech <span>ChatBot</span><img src="images/bot.png" alt=""></h1>
-    <textarea placeholder="Write Anything here"></textarea>
-    <div class="row">
-        <select id="dynamicSelect">
-            <option value="" disabled selected>Select voice</option>
-          </select>
-          
-        <button><img src="images/play.png">Listen</button>
+    <div class="container">
+        <h1>Speech To Text <span>Converter</span><img src="images/microphone.png" alt=""></h1>
+        <textarea placeholder="Your speech will appear here..." readonly></textarea>
+        <div class="row">
+            <button id="start-btn"><img src="images/play.png"> Start Listening</button>
+            <button id="stop-btn" disabled> Stop Listening</button>
+        </div>
     </div>
-    </div>
-    <a href="stt.html" class="stt">Speech to text</a>
-    <script src="script.js"></script>
+    <script src="stt.js"></script>
     <script>
         window.watsonAssistantChatOptions = {
           integrationID: "2245684c-6266-46ea-a669-5cb0ba441823", // The ID of this integration.
